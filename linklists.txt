@@ -1,0 +1,68 @@
+struct node 
+{
+int data;
+struct node *next;
+};
+struct createNode(int data)
+{
+struct node *temp;
+temp=(struct node*)malloc(sizeof(struct node));
+temp->data=data;
+temp->next=NULL;
+return temp;
+}
+struct createList(int n)
+{
+struct node *newn,*head=NULL,*last;
+for(int i=0;i<n;i++)
+{
+printf("enter element:");
+int data;
+scanf("%d",&data);
+newn=createNode(data);
+if(head==NULL)
+head=newn;
+else
+last->next=newn;
+last=newn;
+}
+return head;
+}
+struct deleteNode(int ele,struct node *head)
+{
+struct node *temp=head;
+while(temp)
+{
+	if(temp->data==ele)
+	{
+		if(temp==head)
+			head=temp;
+		last->next=temp->next;
+free(temp);
+			return head;
+	}
+	last=temp;
+	temp=temp->next;
+}
+return head;
+}
+struct node *search(struct node*head,int ele)
+{
+struct node *temp=head;
+while(temp)
+{
+if(temp->data==ele)
+
+struct node *delete(int pos,struct node*head)
+{
+struct node * temp=head;
+if(pos<1 || pos>l)
+{
+deletion is not possible
+}
+if(pos==1)
+return head->next;
+for(int  i=1;i<pos-1;i++)
+temp=temp->next;
+temp->next=temp->next->next;
+}
